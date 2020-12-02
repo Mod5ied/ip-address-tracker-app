@@ -1,0 +1,20 @@
+@import "./presets";
+@import "./colorVars";
+@mixin flexLayout($direction) {
+    display: flex;
+    flex-direction: $direction;
+}
+@mixin grid {
+    display: flex;
+    place-items: center;
+}
+
+
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+  }
+  .attribution a {
+    color: hsl(228, 45%, 44%);
+  }

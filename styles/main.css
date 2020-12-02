@@ -1,0 +1,35 @@
+* {
+  border: 1px solid red !important;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  background: url(/images/pattern-bg.png) no-repeat;
+  z-index: -1;
+  cursor: pointer;
+}
+
+/*body::after {
+    content: "";
+    background: url(/images/icon-location.svg)no-repeat;
+    position: absolute;
+    top: 20%;
+    bottom: 60%;
+    left: 0;
+    right: 0;
+    z-index: 1;
+
+}*/
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: #3e52a3;
+}
+/*# sourceMappingURL=main.css.map */

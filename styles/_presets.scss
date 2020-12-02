@@ -1,0 +1,24 @@
+* {
+    border: 1px solid red !important;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    background: url(/images/pattern-bg.png)no-repeat;
+    z-index: -1;
+    cursor: pointer;
+}
+/*body::after {
+    content: "";
+    background: url(/images/icon-location.svg)no-repeat;
+    position: absolute;
+    top: 20%;
+    bottom: 60%;
+    left: 0;
+    right: 0;
+    z-index: 1;
+
+}*/
