@@ -1,20 +1,53 @@
-@import "./presets";
+
+@import "./presets" ;
 @import "./colorVars";
 @mixin flexLayout($direction) {
-    display: flex;
-    flex-direction: $direction;
+  display: flex;
+  flex-direction: $direction;
+}
+@mixin row($direction) {
+  justify-content: $direction;
+}
+@mixin col($direction) {
+  align-items: $direction;
 }
 @mixin grid {
-    display: flex;
-    place-items: center;
+  display: grid;
+  place-items: center;
 }
 
+/* Media query for mobile view */
+@media (max-width: 500px) {
+  .header-primary {
+    @include grid();
+    color: hsl(0, 0%, 98%);
+    font-size: 1.4rem;
+    font-weight: 400;
+    letter-spacing: 1.5px;
+    
+  }
+  .search-area {
+    @include flexLayout(row);
+    @include row(center);
 
+    
+  }
+}
 
+/* Media query for desktop devices */
+@media (min-width: 1021px) {
+  .header-primary {
+    @include grid();
+    color: hsl(0, 0%, 98%);
+    font-size: 1.8rem;
+    font-weight: 600;
+  }
+}
+//Styles for my  attributon goes here
 .attribution {
-    font-size: 11px;
-    text-align: center;
-  }
-  .attribution a {
-    color: hsl(228, 45%, 44%);
-  }
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
