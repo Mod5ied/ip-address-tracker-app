@@ -13,7 +13,6 @@ body {
   background: url(/images/pattern-bg.png) center no-repeat;
   background-size: cover;
   font-family: "Rubik", sans-serif;
-  cursor: pointer;
 }
 
 /* Media query for mobile view */
@@ -111,6 +110,82 @@ body {
     color: #fafafa;
     font-size: 1.8rem;
     font-weight: 600;
+  }
+  .search-area {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: .5rem 0;
+  }
+  .search-area .search-box {
+    height: 2.8rem;
+  }
+  .search-area #input-box {
+    width: 29rem;
+    border: transparent;
+    border-top-left-radius: .6rem;
+    border-bottom-left-radius: .6rem;
+    background: #fafafa;
+    color: #030303;
+    cursor: pointer;
+  }
+  .search-area #submit-btn {
+    width: 3rem;
+    border: transparent;
+    border-top-right-radius: .65rem;
+    border-bottom-right-radius: .65rem;
+    background: #080808;
+    font-weight: 600;
+    color: #fafafa;
+    cursor: pointer;
+  }
+  .main-area {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    gap: 1rem;
+    width: 78%;
+    border-radius: .6rem;
+    padding: 1.5rem 0;
+    position: absolute;
+    left: 9rem;
+    top: 24%;
+    background: #fafafa;
+  }
+  .main-area .main-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 20rem;
+    margin: 0 .8rem;
+    text-align: left;
+    line-height: .18;
+  }
+  .main-area .main-content p {
+    color: #4d4d4d;
+    font-size: .7rem;
+    font-weight: 700;
+  }
+  .main-area .main-content:not(:last-child) {
+    border-right: 1px solid gray;
   }
 }
 

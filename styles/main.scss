@@ -88,7 +88,67 @@
     font-size: 1.8rem;
     font-weight: 600;
   }
+  .search-area {
+    @include flexLayout(row);
+    @include row(center);
+    padding: .5rem 0;
+    
+    .search-box {
+      height: 2.8rem;
+    }
+    #input-box {
+      width: 29rem;
+      border: transparent;
+      border-top-left-radius: .6rem;
+      border-bottom-left-radius: .6rem;
+      background: hsl(0, 0%, 98%);
+      color: hsl(0, 0%, 1%);
+      cursor: pointer;
+    }
+    #submit-btn {
+      width: 3rem;
+      border: transparent;
+      border-top-right-radius: .65rem;
+      border-bottom-right-radius: .65rem;
+      background: hsl(0, 0%, 3%);
+      font-weight: 600;
+      color: hsl(0, 0%, 98%);
+      cursor: pointer;
+    }
+  }
+  .main-area {
+    @include flexLayout(row);
+    @include row(center);
+    gap: 1rem;
+    width: 78%;
+    border-radius: .6rem;
+    padding: 1.5rem 0;
+    position: absolute;
+    left: 9rem;
+    top: 24%;
+    background: hsl(0, 0%, 98%);
+    
+
+    .main-content {
+      @include flexLayout(column);
+      width: 20rem;
+      margin: 0 .8rem;
+      text-align: left;
+      line-height: .18;
+      
+      p {
+        color: hsl(0, 0%, 30%);
+        font-size: .7rem;
+        font-weight: 700;
+      }
+    }
+    .main-content:not(:last-child) {
+      border-right: 1px solid hsl(0, 0%, 50%);
+    }
+  }
 }
+
+
 //Styles for my  attributon goes here
 .attribution {
   font-size: 11px;
