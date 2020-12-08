@@ -18,7 +18,7 @@ body {
 /* Media query for mobile view */
 @media (max-width: 500px) {
   body {
-    height: 19rem;
+    height: 18rem;
   }
   .header-primary {
     display: -ms-grid;
@@ -27,7 +27,7 @@ body {
     padding-top: 1rem;
     color: #fafafa;
     font-size: 1.4rem;
-    font-weight: 400;
+    font-weight: 550;
     letter-spacing: 1.5px;
   }
   .search-area {
@@ -77,9 +77,10 @@ body {
     border-radius: .6rem;
     padding: 1rem 0;
     position: absolute;
-    left: 1rem;
-    top: 19%;
+    left: 1.2rem;
+    top: 10rem;
     background: #fafafa;
+    z-index: 1;
   }
   .main-area .main-content {
     display: -webkit-box;
@@ -92,12 +93,17 @@ body {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    line-height: .18;
+    line-height: .3;
   }
   .main-area .main-content p {
     color: #4d4d4d;
     font-size: .7rem;
     font-weight: 700;
+  }
+  .map-area {
+    height: 90rem;
+    position: relative;
+    top: 55%;
   }
 }
 
@@ -160,11 +166,12 @@ body {
     gap: 1rem;
     width: 78%;
     border-radius: .6rem;
-    padding: 1.5rem 0;
+    padding: .8rem 0;
     position: absolute;
     left: 9rem;
-    top: 24%;
+    top: 10rem;
     background: #fafafa;
+    z-index: 1;
   }
   .main-area .main-content {
     display: -webkit-box;
@@ -175,7 +182,7 @@ body {
         -ms-flex-direction: column;
             flex-direction: column;
     width: 20rem;
-    margin: 0 .8rem;
+    margin: 0 2rem;
     text-align: left;
     line-height: .18;
   }
@@ -184,8 +191,17 @@ body {
     font-size: .7rem;
     font-weight: 700;
   }
+  .main-area .main-content h3 {
+    width: 8.3rem;
+    line-height: 1;
+    word-wrap: break-word;
+  }
   .main-area .main-content:not(:last-child) {
-    border-right: 1px solid gray;
+    border-right: 1px solid #999999;
+  }
+  .map-area {
+    position: relative;
+    top: 40%;
   }
 }
 
