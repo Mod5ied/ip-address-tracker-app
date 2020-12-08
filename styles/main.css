@@ -1,5 +1,7 @@
 * {
-  border: 1px solid red !important;
+  -webkit-box-ordinal-group: 2 !important;
+      -ms-flex-order: 1px solid red !important;
+          order: 1px solid red !important;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -16,10 +18,14 @@ body {
 
 /* Media query for mobile view */
 @media (max-width: 500px) {
+  body {
+    height: 19rem;
+  }
   .header-primary {
     display: -ms-grid;
     display: grid;
     place-items: center;
+    padding-top: 1rem;
     color: #fafafa;
     font-size: 1.4rem;
     font-weight: 400;
@@ -36,6 +42,63 @@ body {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    padding: .5rem 0;
+  }
+  .search-area .search-box {
+    height: 3rem;
+  }
+  .search-area #input-box {
+    width: 17rem;
+    border: transparent;
+    border-top-left-radius: .6rem;
+    border-bottom-left-radius: .6rem;
+    background: #fafafa;
+    color: #030303;
+  }
+  .search-area #submit-btn {
+    width: 3rem;
+    border: transparent;
+    border-top-right-radius: .65rem;
+    border-bottom-right-radius: .65rem;
+    background: #080808;
+    color: #fafafa;
+  }
+  .main-area {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 90%;
+    border-radius: .6rem;
+    padding: 1rem 0;
+    position: absolute;
+    left: 1rem;
+    top: 19%;
+    background: #fafafa;
+  }
+  .main-area .main-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    line-height: .18;
+  }
+  .main-area .main-content p {
+    color: #4d4d4d;
+    font-size: .7rem;
+    font-weight: 700;
   }
 }
 
