@@ -17,7 +17,7 @@
 }
 
 /* Media query for mobile view */
-@media (max-width: 500px) {
+@media (max-width: 480px) {
   body {
     height: 18rem;
   }
@@ -43,8 +43,14 @@
       border: transparent;
       border-top-left-radius: .6rem;
       border-bottom-left-radius: .6rem;
+      padding: 0 1.5rem;
       background: hsl(0, 0%, 98%);
       color: hsl(0, 0%, 1%);
+    }
+    #input-box:focus{
+      outline: transparent;
+      background: hsl(0, 0%, 95%);
+      opacity: .8;
     }
     #submit-btn {
       width: 3rem;
@@ -52,6 +58,10 @@
       border-top-right-radius: .65rem;
       border-bottom-right-radius: .65rem;
       background: hsl(0, 0%, 3%);
+      color: hsl(0, 0%, 98%);
+    }
+    #submit-btn:focus {
+      background: linear-gradient(to right, #1c64c9ce, #113b75ce);
       color: hsl(0, 0%, 98%);
     }
   }
@@ -86,6 +96,54 @@
   }
 }
 
+/* Media query for iPads and Tablets*/
+@media (max-width: 1020px) and (min-width: 501px) {
+  .header-primary {
+    @include grid();
+    padding-top: 1rem;
+    color: hsl(0, 0%, 98%);
+    font-size: 1.49rem;
+    font-weight: 550;
+    letter-spacing: 1.5px;
+  }
+  .search-area {
+    @include flexLayout(row);
+    @include row(center);
+    padding: .5rem 0;
+
+    .search-box {
+      height: 3rem;
+    }
+    #input-box {
+      width: 18.5rem;
+      border: transparent;
+      border-top-left-radius: .6rem;
+      border-bottom-left-radius: .6rem;
+      padding: 0 2rem;
+      background: hsl(0, 0%, 98%);
+      color: hsl(0, 0%, 1%);
+    }
+    #input-box:focus{
+      outline: transparent;
+      background: hsl(0, 0%, 95%);
+      opacity: .8;
+    }
+    #submit-btn {
+      width: 3rem;
+      border: transparent;
+      border-top-right-radius: .65rem;
+      border-bottom-right-radius: .65rem;
+      background: hsl(0, 0%, 3%);
+      color: hsl(0, 0%, 98%);
+    }
+    #submit-btn:focus {
+      outline: transparent;
+      background: linear-gradient(to right, #1c64c9ce, #113b75ce);
+      color: hsl(0, 0%, 98%);
+    }
+  }
+}
+
 /* Media query for desktop devices */
 @media (min-width: 1021px) {
   .header-primary {
@@ -107,9 +165,15 @@
       border: transparent;
       border-top-left-radius: .6rem;
       border-bottom-left-radius: .6rem;
+      padding: 0 2rem;
       background: hsl(0, 0%, 98%);
       color: hsl(0, 0%, 1%);
       cursor: pointer;
+    }
+    #input-box:focus{
+      outline: transparent;
+      background: hsl(0, 0%, 94%);
+      box-sizing: 0 .2rem .3rem 0 rgb(43, 41, 41);
     }
     #submit-btn {
       width: 3rem;
@@ -120,6 +184,11 @@
       font-weight: 600;
       color: hsl(0, 0%, 98%);
       cursor: pointer;
+    }
+    #submit-btn:focus {
+      outline: transparent;
+      background: linear-gradient(to right, #1c64c9ce, #113b75ce);
+      color: hsl(0, 0%, 98%);
     }
   }
   .main-area {

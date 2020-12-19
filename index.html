@@ -15,17 +15,24 @@
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
-    <link rel="stylesheet" href="./styles/main.css  ">
+    <link rel="stylesheet" href="./styles/main.css  " />
+    <script src="./main.js"></script>
     <title>Frontend Mentor | IP Address Tracker</title>
   </head>
   <body>
     <h1 class="header-primary">IP Address Tracker</h1>
     <!-- add offset value dynamically using the API -->
     <nav class="search-area">
-      <input type="text" class="search-box" id="input-box" placeholder="   Search for any IP address or domain" id="userinput" />
-      <button type="submit" class="search-box" id="submit-btn"> > </button>
+      <input
+        type="text"
+        class="search-box"
+        id="input-box"
+        placeholder="Search for any IP address or domain"
+        onclick="checkContent()"
+      />
+      <button type="submit" class="search-box" id="submit-btn">></button>
     </nav>
-    <main class="main-area ">
+    <main class="main-area">
       <div class="main-content">
         <p>IP ADDRESS</p>
         <h3>192.212.174.101</h3>
@@ -44,8 +51,12 @@
       </div>
     </main>
     <section class="map-area">
-      <img src="./images/test-Img.jpg" alt="" style="height: 40%; width: 100%;">
-    </section-->
+      <img
+        src="./images/test-Img.jpg"
+        alt=""
+        style="height: 40%; width: 100%"
+      />
+    </section>
     <!--div class="attribution">
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
