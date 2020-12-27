@@ -20,6 +20,7 @@
     <title>Frontend Mentor | IP Address Tracker</title>
   </head>
   <body>
+    
     <h1 class="header-primary">IP Address Tracker</h1>
     <!-- add offset value dynamically using the API -->
     <nav class="search-area">
@@ -29,6 +30,7 @@
         id="input-box"
         placeholder="Search for any IP address or domain"
         onclick="checkContent()"
+        ref= "userInput"
       />
       <button type="submit" class="search-box" id="submit-btn">></button>
     </nav>
