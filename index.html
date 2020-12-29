@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- displays site properly based on user's device -->
+    <!--script src="https://unpkg.com/vue/dist/vue.js"></script-->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;1,300&display=swap"
@@ -16,54 +18,60 @@
       href="./images/favicon-32x32.png"
     />
     <link rel="stylesheet" href="./styles/main.css  " />
-    <script src="./main.js"></script>
+    <script src="./main.js" defer></script>
     <title>Frontend Mentor | IP Address Tracker</title>
   </head>
   <body>
-    
-    <h1 class="header-primary">IP Address Tracker</h1>
-    <!-- add offset value dynamically using the API -->
-    <nav class="search-area">
-      <input
-        type="text"
-        class="search-box"
-        id="input-box"
-        placeholder="Search for any IP address or domain"
-        onclick="checkContent()"
-        ref= "userInput"
-      />
-      <button type="submit" class="search-box" id="submit-btn">></button>
-    </nav>
-    <main class="main-area">
-      <div class="main-content">
-        <p>IP ADDRESS</p>
-        <h3>192.212.174.101</h3>
-      </div>
-      <div class="main-content">
-        <p>LOCATION</p>
-        <h3>Brooklyn, NY 10001</h3>
-      </div>
-      <div class="main-content">
-        <p>TIMEZONE</p>
-        <h3>UTC -05:00</h3>
-      </div>
-      <div class="main-content">
-        <p>ISP</p>
-        <h3>SpaceX Starlink</h3>
-      </div>
-    </main>
-    <section class="map-area">
-      <img
-        src="./images/test-Img.jpg"
-        alt=""
-        style="height: 40%; width: 100%"
-      />
-    </section>
-    <!--div class="attribution">
+    <div id="vueApp">
+      <h1 class="header-primary">IP Address Tracker</h1>
+      <!-- add offset value dynamically using the API -->
+      <nav class="search-area">
+        <input
+          type="text"
+          class="search-box"
+          id="input-box"
+          placeholder="Search for any IP address or domain"
+          ref="userInput"
+        />
+        <button
+          type="submit"
+          class="search-box"
+          id="submit-btn"
+        >
+          >
+        </button>
+      </nav>
+      <main class="main-area">
+        <div class="main-content">
+          <p>IP ADDRESS</p>
+          <h3 id="Ip">192.212.174.101</h3>
+        </div>
+        <div class="main-content">
+          <p>LOCATION</p>
+          <h3 id="address">Brooklyn, NY 10001</h3>
+        </div>
+        <div class="main-content">
+          <p>TIMEZONE</p>
+          <h3 id="timeZone">UTC -05:00</h3>
+        </div>
+        <div class="main-content">
+          <p>ISP</p>
+          <h3 id="isp">SpaceX Starlink</h3>
+        </div>
+      </main>
+      <section class="map-area">
+        <img
+          src="./images/test-Img.jpg"
+          alt=""
+          style="height: 40%; width: 100%"
+        />
+      </section>
+      <!--div class="attribution">
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
         >Frontend Mentor</a
       >. Coded by <a href="#">Noble Patrick</a>.
-    </div-->
+    </div>-->
+    </div>
   </body>
 </html>
